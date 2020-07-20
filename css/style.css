@@ -26,6 +26,10 @@ p {
   line-height: 24px;
 }
 
+ul {
+  list-style: none;
+}
+
 section {
   background: #fff;
   overflow: hidden;
@@ -171,7 +175,7 @@ section {
   transform: rotate(-90deg);
   position: relative;
   top: 60px;
-  left: -63px;
+  left: -53px;
   display: inline-block;
 }
 
@@ -247,8 +251,148 @@ section {
   transform: translateY(-20px);
 }
 
+/* Smooth transition */
+
 .about-item,
 .about-item i,
 .about-item hr {
   transition: all 400ms ease-in-out;
+}
+
+/* Team Section */
+#team-left .vertical-heading {
+  min-height: 160px;
+}
+
+.team-member {
+  margin: 8px;
+  position: relative;
+}
+
+.team-member-overlay {
+  background: rgba(33, 34, 38, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 300ms linear;
+}
+
+.team-member-info {
+  width: 100%;
+  height: 100%;
+  padding: 30% 0;
+}
+
+.team-member-info h6 {
+  color: #f4c613;
+  font-size: 16px;
+  margin: 0;
+}
+
+.team-member-info p {
+  color: #fff;
+}
+
+.team-member:hover .team-member-overlay {
+  opacity: 1;
+}
+
+/* Social Icons */
+ul.social-list {
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.social-list li {
+  margin: 0 3px;
+}
+
+ul.social-list li a {
+  border: 1px solid #fff;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+ul.social-list li:first-child a:hover {
+  background: #3b5998;
+  border-color: transparent;
+}
+
+ul.social-list li:nth-child(2) a:hover {
+  background: #00aced;
+  border-color: transparent;
+}
+
+ul.social-list li:last-child a:hover {
+  background: #dd4b39;
+  border-color: transparent;
+}
+
+/* Special Icons */
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #212226;
+  font-size: 40px;
+  background: none;
+  margin: 0;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: none;
+  color: #212226;
+}
+
+/* Skills */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill h4 {
+  line-height: 62px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.progress {
+  height: 25px;
+  background: #efefef;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.progress-bar {
+  background: #f4c613;
+  position: relative;
+}
+
+.progress-bar span {
+  font-size: 11px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+  background: #212226;
+  padding: 3px;
+  position: absolute;
+  left: 97%;
+  top: -47px;
+  opacity: 0;
+}
+
+.progress-bar span::before {
+  content: '';
+  border-top: 8px solid #212226;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  bottom: -8px;
+  left: 23%;
 }
